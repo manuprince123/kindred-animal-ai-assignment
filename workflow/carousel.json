@@ -1,0 +1,13 @@
+{
+  "title": "AI is a co-pilot, not autopilot",
+  "audience": "Students and early-career professionals",
+  "format": "1080x1350 PNG",
+  "slides": [
+    {"overline":"A PRACTICAL AI MINDSET","title":"AI is a co-pilot, not autopilot.","body":"Use it to move faster. Keep your judgment in the driver's seat."},
+    {"overline":"01 / START SMALL","title":"Give AI a clear job.","body":"State your goal, audience, context and the format you need. Specific inputs make useful drafts."},
+    {"overline":"02 / ASK BETTER","title":"Treat the first answer as a draft.","body":"Ask for alternatives, missing angles and a simpler version before you choose a direction."},
+    {"overline":"03 / VERIFY","title":"Check every claim that matters.","body":"Open the source. Confirm dates, numbers and quotes before sharing them."},
+    {"overline":"04 / MAKE IT YOURS","title":"Add your lived experience.","body":"Your examples, taste and point of view turn generic output into something worth sharing."},
+    {"overline":"YOUR NEXT STEP","title":"Try one small workflow this week.","body":"Pick a repetitive task. Draft with AI, review carefully, and keep what genuinely helps."}
+  ]
+}

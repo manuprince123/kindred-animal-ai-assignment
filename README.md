@@ -20,7 +20,9 @@ This is an interactive prototype responding to all three deliverables in `Intern
 
 ## 3. Carousel and repeatable content system
 
-The six-slide sample, **“AI is a co-pilot, not autopilot,”** is editable in the Carousel Studio. Each slide can be exported as a 1080 × 1350 PNG. The on-page preview and the PNG export are produced from the same editable content. The source content is in `dist/app.js`; the visual template is in `dist/styles.css` and the canvas export function.
+The six-slide sample, **“AI is a co-pilot, not autopilot,”** is editable in the Carousel Studio. Each slide can be exported as a 1080 × 1350 PNG. The approved source is `workflow/carousel.json`; the raw brief, research note, and human review are saved beside it. The sample was AI-assisted and then checked against NIST, UNESCO and OpenAI guidance. The on-page preview loads the approved JSON and allows edits; revised copy can be downloaded as JSON.
+
+The repeatable export is implemented in `scripts/build_carousel.py`. Running `python3 scripts/build_carousel.py` validates the slide count, copy lengths, text fit and dimensions, then writes six ready-to-publish PNGs under `dist/assets/carousel/`. A GitHub Actions workflow runs the same export when approved copy or the renderer changes and uploads the PNG set as an artifact. The founder's approval remains a human step, documented in `workflow/review.md`. This is a working export automation, not a claim that live AI research or Canva/n8n APIs are connected.
 
 **Recommended founder workflow:**
 
@@ -54,4 +56,11 @@ The six-slide sample, **“AI is a co-pilot, not autopilot,”** is editable in 
 
 ## Prototype limitations
 
-This is front-end demonstration code. Form submissions use `localStorage` and are not transmitted. Provider details are fictional. The generated PNGs are suitable for a sample submission, but a founder should keep editable design templates and source copy for ongoing production.
+This is front-end demonstration code. Form submissions use `localStorage` and are not transmitted. Provider details are fictional. The page labels those limits in the relevant flows. The generated PNGs are suitable for a sample submission, but a founder should keep editable design templates and source copy for ongoing production.
+
+## Verification
+
+- `node --check dist/app.js` passed.
+- `python3 scripts/build_carousel.py` produced six 1080 × 1350 RGB PNGs and checked text fit.
+- A headless Chrome pass at 1440 px desktop and 390 px mobile widths found no horizontal overflow or JavaScript page errors. Service filtering, carousel navigation and mobile navigation passed.
+- Desktop and mobile full-page screenshots were reviewed in `qa/` locally. The mobile and desktop layouts are legible, with no observed overlaps or clipped sections.

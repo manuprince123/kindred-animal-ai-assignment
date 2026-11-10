@@ -1,0 +1,27 @@
+name: Build carousel PNGs
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - workflow/carousel.json
+      - scripts/build_carousel.py
+      - .github/workflows/carousel.yml
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install renderer
+        run: python -m pip install Pillow==11.3.0
+      - name: Validate and export approved slides
+        run: python scripts/build_carousel.py
+      - name: Upload ready-to-publish carousel
+        uses: actions/upload-artifact@v4
+        with:
+          name: kindred-carousel-pngs
+          path: dist/assets/carousel/*.png
