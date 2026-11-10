@@ -1,0 +1,11 @@
+{
+  "provenance": "AI-assisted first draft from the saved founder brief and research note; retained to show the review step",
+  "slides": [
+    {"overline":"AI AND YOU","title":"AI is your co-pilot, not autopilot.","body":"Let it help with the first pass, but keep final decisions with you."},
+    {"overline":"01 / BRIEF","title":"Start with a better brief.","body":"Tell the tool what you need, who it is for, and what a useful answer looks like."},
+    {"overline":"02 / ITERATE","title":"Don't stop at answer one.","body":"Ask for alternatives and gaps, then refine the strongest direction."},
+    {"overline":"03 / VERIFY","title":"Check important claims.","body":"Open sources and confirm numbers, dates and quotes before publishing."},
+    {"overline":"04 / PERSONALIZE","title":"Bring your own point of view.","body":"Real examples and your judgment make the work more useful."},
+    {"overline":"05 / TRY IT","title":"Test one small workflow.","body":"Pick a recurring task, draft with AI, review, and keep only what helps."}
+  ]
+}
